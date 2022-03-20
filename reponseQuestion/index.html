@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questions</title>
+    <script src="scripts/jquery.js"></script>
+</head>
+
+<body onload="function01()">
+    <style>
+        #class {
+            text-align: center;
+            border: 2px black solid;
+            width: 50%;
+            height: auto;
+            margin-left: 400px;
+        }
+        
+        li {
+            text-decoration: none;
+            text-align: left;
+            list-style-type: none;
+        }
+        
+        .li {
+            text-align: center;
+        }
+        
+        .text {
+            font-size: x-large;
+            color: aqua;
+            text-align: left;
+        }
+        
+        div img {
+            width: 100px;
+            height: 80px;
+            border: 2px green solid;
+        }
+        
+        #img {
+            width: 100px;
+            height: 80px;
+            border: 2px red solid;
+            display: transparent;
+            opacity: 0.7;
+            background-color: aliceblue;
+        }
+        
+        h1 {
+            color: blueviolet;
+            font-size: xx-large;
+        }
+    </style>
+    <script>
+        function function01() {
+            $("#reponse01").hide();
+            $("#reponse02").hide();
+            $("#reponse03").hide();
+            $("#reponse04").hide();
+            $("#reponse05").hide();
+            // ***************************************************QUESTION01*************************
+            $("#rabat").click(function() {
+                if ($("#rabat").attr("checked", "true")) {
+                    $("#ul01").next().html(' <img src="images/succes.png" alt="">');
+                }
+            })
+
+            $("#fes").click(function() {
+                if ($("#fes").attr("checked", "true")) {
+                    $("#ul01").next().html(' <img src="images/echo.jpg" alt="" id="img">');
+                }
+            })
+            $("#casablanca").click(function() {
+                    if ($("#casablanca").attr("checked", "true")) {
+                        $("#ul01").next().html(' <img src="images/echo.jpg" alt="" id="img">');
+                    }
+                })
+                // ***************************************************QUESTION02*************************
+            $("#d1").click(function() {
+                if ($("#d1").attr("checked", "true")) {
+                    $("#ul02").next().html(' <img src="images/succes.png" alt="">');
+                }
+            })
+
+            $("#d2").click(function() {
+                if ($("#d2").attr("checked", "true")) {
+                    $("#ul02").next().html(' <img src="images/echo.jpg" alt="" id="img">');
+                }
+            })
+            $("#d3").click(function() {
+                    if ($("#d3").attr("checked", "true")) {
+                        $("#ul02").next().html(' <img src="images/echo.jpg" alt="" id="img">');
+                    }
+                })
+                // ***************************************************QUESTION03*************************
+            $("#d11").click(function() {
+                if ($("#d11").attr("checked", "true")) {
+                    $("#ul03").next().html(' <img src="images/succes.png" alt="">');
+                }
+            })
+
+            $("#d12").click(function() {
+                if ($("#d12").attr("checked", "true")) {
+                    $("#ul03").next().html(' <img src="images/echo.jpg" alt="" id="img">');
+                }
+            })
+            $("#d13").click(function() {
+                    if ($("#d13").attr("checked", "true")) {
+                        $("#ul03").next().html(' <img src="images/echo.jpg" alt="" id="img">');
+                    }
+                })
+                // ***************************************************QUESTION04*************************
+            $("#p12").click(function() {
+                if ($("#p12").attr("checked", "true")) {
+                    $("#ul04").next().html(' <img src="images/succes.png" alt="">');
+                }
+            })
+
+            $("#p11").click(function() {
+                if ($("#p11").attr("checked", "true")) {
+                    $("#ul04").next().html(' <img src="images/echo.jpg" alt="" id="img">');
+                }
+            })
+            $("#p13").click(function() {
+                    if ($("#p13").attr("checked", "true")) {
+                        $("#ul04").next().html(' <img src="images/echo.jpg" alt="" id="img">');
+                    }
+                })
+                // ***************************************************QUESTION05*************************
+            $("#p1").click(function() {
+                if ($("#p1").attr("checked", "true")) {
+                    $("#ul05").next().html(' <img src="images/succes.png" alt="">');
+                }
+            })
+
+            $("#p2").click(function() {
+                if ($("#p2").attr("checked", "true")) {
+                    $("#ul05").next().html(' <img src="images/echo.jpg" alt="" id="img">');
+                }
+            })
+            $("#p3").click(function() {
+                if ($("#p3").attr("checked", "true")) {
+                    $("#ul05").next().html(' <img src="images/echo.jpg" alt="" id="img">');
+                }
+            })
+        }
+
+        function function02() {
+            $(document).ready(function() {
+                $("#reponse01").slideToggle();
+                $("#link01").text("Cacher reponse")
+            });
+        }
+
+
+        function function03() {
+            $(document).ready(function() {
+                $("#link02").text("Cacher reponse")
+                $("#reponse02").slideToggle();
+            });
+
+        }
+
+        function function04() {
+            $(document).ready(function() {
+                $("#link03").text("Cacher reponse")
+                $("#reponse03").slideToggle();
+            });
+
+        }
+
+        function function05() {
+            $(document).ready(function() {
+                $("#link04").text("Cacher reponse")
+                $("#reponse04").slideToggle();
+            });
+
+        }
+
+        function function06() {
+            $(document).ready(function() {
+                $("#link05").text("Cacher reponse")
+                $("#reponse05").slideToggle();
+            });
+
+        }
+    </script>
+    <h1 align="center">Questions</h1>
+    <hr>
+    <div id="class">
+        <div class="text">1-Quelle est la capitale du Maroc?</div>
+        <div>
+            <ul id="ul01">
+                <li><input type="radio" name="capital" id="fes">Fes</li>
+                <li><input type="radio" name="capital" id="rabat">Rabat</li>
+                <li><input type="radio" name="capital" id="casablanca">Casablanca</li>
+                <li class="li"><a href="javascript:function02()" id="link01">Afficher la reponse</a></li>
+            </ul>
+            <div></div>
+        </div>
+        <div id="reponse01">Rabat</div>
+        <!-- ######################para02############# -->
+        <div class="text">2-Quelle est la definition de Javascript?</div>
+        <div>
+            <ul id="ul02">
+                <li><input type="radio" name="definition" id="d1">Langage de programmation qui permet d'ecrire des scripts cote client </li>
+                <li><input type="radio" name="definition" id="d2">Permet également de mettre en forme ces données via un ensemble de balises</li>
+                <li><input type="radio" name="definition" id="d3">Langage de programmation qui permet d'ecrire des scripts cote serveur</li>
+                <li class="li"><a href="javascript:function03()" id="link02">Afficher la reponse</a></li>
+            </ul>
+            <div></div>
+        </div>
+        <div id="reponse02">Langage de programmation qui permet d'ecrire des scripts cote client</div>
+        <!-- ######################para03############# -->
+        <div class="text">3-Quelle est la date de la derniere version de Javascript?</div>
+        <div>
+            <ul id="ul03">
+                <li><input type="radio" name="derniere" id="d11">Juin2020</li>
+                <li><input type="radio" name="derniere" id="d12">Juin2021</li>
+                <li><input type="radio" name="derniere" id="d13">Mai2020</li>
+                <li class="li"><a href="javascript:function04()" id="link03">Afficher la reponse</a></li>
+            </ul>
+            <div></div>
+        </div>
+        <div id="reponse03">Juin2020</div>
+        <!-- ######################para04############# -->
+        <div class="text">4-Quelle est la date de la premiere version de Javascript?</div>
+        <div>
+            <ul id="ul04">
+                <li><input type="radio" name="premiere" id="p11">Juin2000</li>
+                <li><input type="radio" name="premiere" id="p12">Mai1996</li>
+                <li><input type="radio" name="premiere" id="p13">Mai1998</li>
+                <li class="li"><a href="javascript:function05()" id="link04">Afficher la reponse</a></li>
+            </ul>
+            <div></div>
+        </div>
+        <div id="reponse04">Mai1996</div>
+        <!-- ######################para05############# -->
+        <div class="text">5-Quelle est le pere de tout les langages Web?</div>
+        <div>
+            <ul id="ul05">
+                <li><input type="radio" name="pere" id="p1">SGML</li>
+                <li><input type="radio" name="pere" id="p2">HTML</li>
+                <li><input type="radio" name="pere" id="p3">XML</li>
+                <li class="li"><a href="javascript:function06()" id="link05">Afficher la reponse</a></li>
+            </ul>
+            <div></div>
+        </div>
+        <div id="reponse05">SGML</div>
+
+    </div>
+</body>
+
+</html>
